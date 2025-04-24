@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bionutrex - Fuerza en cada gramo</title>
+    <!--Tailwind here-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!--Banner start-->
+    <section
+      class="h-screen bg-[url('img/banner.jpg')] bg-cover bg-center bg-no-repeat |"
+    >
+      <!--Header start-->
+      <div
+        class="nav-container w-screen flex justify-center items-center text-[#D9D9D9]"
+      >
+        <nav
+          class="w-screen h-13 relative flex items-center px-10 | lg:w-[80%] lg:mt-5 lg:rounded-4xl"
+        >
+          <div
+            class="title text-white text-lg relative z-10 flex | lg:flex-grow"
+          >
+            <h1>BIO<b>NUTREX</b></h1>
+          </div>
+          <div
+            class="menu hidden text-white text-lg relative z-10 flex justify-center items-center | lg:flex"
+          >
+            <ul
+              class="flex [&>li>a]:text-sm [&>li>a]:px-3 [&>li>a]:py-1 [&>li>a]:rounded-2xl [&>li>a]:hover:bg-[#686868] [&>li>a]:transition-all"
+            >
+              <li><a href="#">Best Sellers</a></li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Suplementos</a></li>
+            </ul>
+          </div>
+          <div
+            class="btns flex gap-2 relative z-10 [&>div>a>img]:w-6 [&>div>a>img]:invert flex flex-grow justify-end | lg:gap-5 lg:[&>div>a>img]:w-8"
+          >
+            <div class="shopping-cart">
+              <a href=""><img src="img/shop-cart.svg" alt="" /></a>
+            </div>
+            <div class="browser">
+              <a href=""><img src="img/browse.svg" alt="" /></a>
+            </div>
+            <div class="user">
+              <a href=""><img src="img/user.svg" alt="" /></a>
+            </div>
+          </div>
+          <div
+            class="absolute inset-0 bg-[#1E1E1E] opacity-50 rounded-inherit z-0 | lg:rounded-4xl"
+          ></div>
+        </nav>
+      </div>
+      <!--Header end-->
+
+      <!--Bottom start-->
+      <div
+        class="bottom-container h-[90vh] w-full flex flex-col justify-end items-center text-white px-5 | lg:flex-row lg:items-end lg:justify-center lg:pb-10"
+      >
+        <div
+          class="flex text-center text-3xl font-bold | lg:w-[60%] lg:text-start lg:text-6xl"
+        >
+          <h1>DESCUBRE LO MEJOR DE LA SUPLEMENTACIÓN</h1>
+        </div>
+        <div
+          class="flex flex-col justify-end items-center text-center pb-10 [&>p]:text-lg [&>p]:mb-3 [&>a]:bg-[#FFFFFF] [&>a]:text-black [&>a]:rounded-3xl [&>a]:px-5 [&>a]:py-2 [&>a]:text-sm | lg:items-end lg:pb-0 lg:w-[40%] lg:text-end lg:[&>p]:text-2xl"
+        >
+          <p>Mejores precios, alta calidad, compromiso con tu salud.</p>
+          <a href="">Comprar ahora</a>
+        </div>
+      </div>
+      <!--Bottom end-->
+    </section>
+    <!--Banner end-->
+
+    <!--Suplements start-->
+    <section>
+      <div class="suplements-container w-full mt-10 mb-10">
+        <h4 class="text-3xl pl-5 | lg:text-2xl | 2xl:text-3xl">SUPLEMENTOS</h4>
+        <div
+          class="mt-10 suplements-section px-5 flex flex-col gap-5 | lg:flex-row lg:gap-5 lg:justify-center lg:items-center lg:w-full"
+        >
+          <div
+            class="protein h-[600px] bg-[url('img/protein_section.jpg')] bg-cover bg-center bg-no-repeat flex flex-col justify-end items-center p-5 text-white | lg:flex-grow lg:items-start | 2xl:h-[800px]"
+          >
+            <p class="pb-2 | lg:text-2xl">Proteína</p>
+            <a class="bg-white text-black px-2 py-1 rounded-2xl" href="#"
+              >COMPRAR AHORA</a
+            >
+          </div>
+          <div
+            class="creatine h-[600px] bg-[url('img/creatine_section.jpg')] bg-cover bg-center bg-no-repeat flex flex-col justify-end items-center p-5 text-white | lg:flex-grow lg:items-start | 2xl:h-[800px]"
+          >
+            <p class="pb-2 | lg:text-2xl">Creatina</p>
+            <a class="bg-white text-black px-2 py-1 rounded-2xl" href="#"
+              >COMPRAR AHORA</a
+            >
+          </div>
+          <div
+            class="Vitamin h-[600px] bg-[url('img/vitamin_section.jpg')] bg-cover bg-center bg-no-repeat flex flex-col justify-end items-center p-5 text-white | lg:flex-grow lg:items-start | 2xl:h-[800px]"
+          >
+            <p class="pb-2 | lg:text-2xl">Vitamina</p>
+            <a class="bg-white text-black px-2 py-1 rounded-2xl" href="#"
+              >COMPRAR AHORA</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Suplements end-->
+
+    <!--best seller inicio-->
+    <section class="pb-10">
+      <h4 class="text-3xl pl-5 lg:text-2xl 2xl:text-3xl">BEST SELLERS</h4>
+      <div
+        class="mt-6 px-5 grid gap-6 grid-cols-1 lg:grid-cols-3 justify-items-center"
+      >
+        <div class="w-full max-w-sm">
+          <img src="img/prot-keto.png" alt="" class="w-full" />
+          <div class="flex mt-1">
+            <h5 class="pr-2 py-1 text-lg lg:pr-1 xl:text-xl">
+              Proteína Keto Isopure
+            </h5>
+            <a
+              class="cursor-pointer bg-[#E0E0E0] text-black px-2 py-1 lg:px-1 lg:py-0 lg:text-[.7rem] lg:flex lg:items-center xl:px-2 xl:py-1 xl:text-[.9rem]"
+              href="#"
+              >COMPRAR AHORA</a
+            >
+          </div>
+        </div>
+        <div class="w-full max-w-sm">
+          <img src="img/prot-keto.png" alt="" class="w-full" />
+          <div class="flex mt-1">
+            <h5 class="pr-2 py-1 text-lg lg:pr-1 xl:text-xl">
+              Proteína Keto Isopure
+            </h5>
+            <a
+              class="cursor-pointer bg-[#E0E0E0] text-black px-2 py-1 lg:px-1 lg:py-0 lg:text-[.7rem] lg:flex lg:items-center xl:px-2 xl:py-1 xl:text-[.9rem]"
+              href="#"
+              >COMPRAR AHORA</a
+            >
+          </div>
+        </div>
+        <div class="w-full max-w-sm">
+          <img src="img/prot-keto.png" alt="" class="w-full" />
+          <div class="flex mt-1">
+            <h5 class="pr-2 py-1 text-lg lg:pr-1 xl:text-xl">
+              Proteína Keto Isopure
+            </h5>
+            <a
+              class="cursor-pointer bg-[#E0E0E0] text-black px-2 py-1 lg:px-1 lg:py-0 lg:text-[.7rem] lg:flex lg:items-center xl:px-2 xl:py-1 xl:text-[.9rem]"
+              href="#"
+              >COMPRAR AHORA</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--best seller fin-->
+
+    <!--nueva coleccion start-->
+    <div>
+      <h5 class="text-3xl pl-5 lg:text-2xl 2xl:text-3xl">Nueva Colección</h5>
+      <div class="flex flex-col justify-center items-center">
+        <div class="mt-10 mb-10 w-full h-100 px-5 relative">
+          <img
+            src="img/new-collection.jpg"
+            alt="new-collection"
+            class="w-full h-full object-cover object-center"
+          />
+          <a
+            href="#"
+            class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-[#1E1E1E] text-white py-1 px-4 text-md | lg:py-1 lg:px-5 lg:text-lg | 2xl:py-2 2xl:px-6 2xl:text-xl"
+          >
+            EXPLORAR
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--nueva coleccion end-->
+
+    <!--footer start-->
+    <div class="bg-white py-12 px-6 sm:py-16 lg:py-20">
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16"
+      >
+        <div class="space-y-4">
+          <h2
+            id="contactanos"
+            class="text-2xl font-bold text-blue-900 tracking-tight sm:text-3xl"
+          >
+            CONTÁCTANOS
+          </h2>
+          <p class="text-base text-gray-700">
+            Expertos en suplementación deportiva. Distribuimos las marcas #1 del
+            mercado para potenciar tu entrenamiento.
+          </p>
+          <div class="mt-2 space-y-2">
+            <p class="text-sm font-semibold text-gray-900">Contáctanos vía:</p>
+            <p class="text-indigo-600 font-medium text-lg">
+              admin.bionutrexmx@gmail.com
+            </p>
+          </div>
+          <div class="mt-4 space-y-2">
+            <p class="text-sm font-semibold text-gray-900">Síguenos</p>
+            <div class="flex flex-col space-y-1">
+              <a
+                href="#"
+                class="flex items-center text-gray-600 hover:text-blue-700"
+              >
+                Facebook
+              </a>
+              <a
+                href="#"
+                class="flex items-center text-gray-600 hover:text-blue-700"
+              >
+                Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+        <form class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
+            <div>
+              <label
+                for="nombre"
+                class="block text-sm font-medium text-gray-700"
+                >Nombre</label
+              >
+              <div class="mt-1 relative rounded-md shadow-sm">
+                <div
+                  class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center"
+                >
+                  <svg
+                    class="h-5 w-5 text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  name="nombre"
+                  id="nombre"
+                  class="focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
+                  placeholder="Ingresa tu nombre..."
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                for="apellido"
+                class="block text-sm font-medium text-gray-700"
+                >Apellido</label
+              >
+              <div class="mt-1 relative rounded-md shadow-sm">
+                <input
+                  type="text"
+                  name="apellido"
+                  id="apellido"
+                  class="focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                  placeholder="Ingresa tu apellido..."
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <label
+              for="correo-electronico"
+              class="block text-sm font-medium text-gray-700"
+              >Correo electrónico</label
+            >
+            <div class="mt-1 relative rounded-md shadow-sm">
+              <div
+                class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center"
+              >
+                <svg
+                  class="h-5 w-5 text-gray-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 4a2 2 0 00-2 2v1.161A7 7 0 019.482 15.6M5 12.04l3.945-2.091A7 7 0 0117 5.96v5a2 2 0 01-2 2H3z"
+                  />
+                </svg>
+              </div>
+              <input
+                type="email"
+                name="correo-electronico"
+                id="correo-electronico"
+                class="focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
+                placeholder="Ingresa tu correo electrónico..."
+              />
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
+            <div>
+              <label
+                for="nombre-compania"
+                class="block text-sm font-medium text-gray-700"
+                >Nombre de la compañía</label
+              >
+              <div class="mt-1 relative rounded-md shadow-sm">
+                <div
+                  class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center"
+                >
+                  <svg
+                    class="h-5 w-5 text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 4a2 2 0 012-2h8a2 2 0 012 2v2h-2V4H6v2H4V4zm10 4a2 2 0 012-2h2v4h-2v-2H10v2h2v-4h-2v2H8v-2H6v4H8v-2h2v2H4v-4h2v2H10v-2h2zM6 9a1 1 0 011-1h2a1 1 0 110 2H7a1 1 0 01-1-1zm4 0a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  name="nombre-compania"
+                  id="nombre-compania"
+                  class="focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
+                  placeholder="Nombre empresarial..."
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                for="intereses"
+                class="block text-sm font-medium text-gray-700"
+                >Intereses</label
+              >
+              <div class="mt-1 relative rounded-md shadow-sm">
+                <div
+                  class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center"
+                >
+                  <svg
+                    class="h-5 w-5 text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  name="intereses"
+                  id="intereses"
+                  class="focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
+                  placeholder="Tus Intereses..."
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <label for="mensaje" class="block text-sm font-medium text-gray-700"
+              >Mensaje</label
+            >
+            <div class="mt-1 relative rounded-md shadow-sm">
+              <div
+                class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center"
+              >
+                <svg
+                  class="h-5 w-5 text-gray-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 011 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <textarea
+                rows="4"
+                name="mensaje"
+                id="mensaje"
+                class="focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
+                placeholder="Tu mensaje..."
+              ></textarea>
+            </div>
+          </div>
+          <div>
+            <button
+              type="submit"
+              class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            >
+              Enviar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--footer end-->
+  </body>
+</html>
