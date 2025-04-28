@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--Tailwind here-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--Boxicons here-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#F2F2F2]">
+    <!--header start-->
+    <div class="flex items-center justify-center w-screen">
+      <nav
+        class="w-screen h-13 relative flex justify-center items-center px-10 | lg:w-[80%] lg:mt-5 lg:rounded-4xl"
+      >
+        <div class="title text-white text-lg relative z-10 flex | lg:flex-grow">
+          <h1>BIO<b>NUTREX</b></h1>
+        </div>
+        <div
+          class="menu hidden text-white text-lg relative z-10 flex justify-center items-center | lg:flex"
+        >
+          <ul
+            class="flex [&>li>a]:text-sm [&>li>a]:px-3 [&>li>a]:py-1 [&>li>a]:rounded-2xl [&>li>a]:hover:bg-[#686868] [&>li>a]:transition-all"
+          >
+            <li><a href="#">Best Sellers</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Suplementos</a></li>
+          </ul>
+        </div>
+        <div
+          class="btns flex gap-2 relative z-10 [&>div>a>img]:w-6 [&>div>a>img]:invert flex flex-grow justify-end | lg:gap-5 lg:[&>div>a>img]:w-8"
+        >
+          <div class="shopping-cart">
+            <a href=""><img src="img/shop-cart.svg" alt="" /></a>
+          </div>
+          <div class="browser">
+            <a href=""><img src="img/browse.svg" alt="" /></a>
+          </div>
+          <div class="user">
+            <a href=""><img src="img/user.svg" alt="" /></a>
+          </div>
+          <div class="">
+            <svg
+              class="h-6 w-5 menu block lg:hidden"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M4 6H20M4 12H20M4 18H20"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="absolute inset-0 bg-[#1E1E1E] opacity-50 rounded-inherit z-0 | lg:rounded-4xl"
+        ></div>
+      </nav>
+    </div>
+    <!--header end-->
+
+    <!--btn return start-->
+    <div class="flex items-center pl-5 mt-10">
+      <div class="btn">
+        <a href="index.html">
+          <img class="w-5" src="img/arrow-left.svg" alt="" />
+        </a>
+      </div>
+      <div class="pb-1 pl-2">
+        <a href="index.html">Regresar</a>
+      </div>
+    </div>
+    <!--btn return end-->
+
+    <!--product detail start-->
+    <div class="w-screen px-5 mt-20 flex flex-col gap-5 | lg:flex-row">
+      <div class="left lg:w-1/2"></div>
+      <div class="right lg:w-1/2">
+        <!--Nombre del producto-->
+        <h3 class="text-2xl | sm:text-4xl | md:text-5xl | lg:text-4xl">
+          NOMBRE DEL PRODUCTO
+        </h3>
+        <!--Gramaje o contenid del producto-->
+        <p class="text-md mt-1 | sm:text-lg | md:text-sm">XXX mg</p>
+        <!--Descripción corta del producto-->
+        <p class="text-md mt-1 | sm:text-lg | md:text-sm">
+          Descripción del producto
+        </p>
+        <div class="precio flex items-center gap-2 mt-5 mb-2">
+          <!--Precio del producto-->
+          <p class="text-lg font-bold | sm:text-2xl |">$XXX.XX</p>
+        </div>
+        <hr />
+        <!--Variante del producto-->
+        <!--Variante cambia dependiendo el tipo de producto-->
+        <p class="text-md mt-10">Cápsulas:</p>
+        <div class="selector inline-flex space-x-2 mt-5">
+          <label class="relative">
+            <input
+              type="radio"
+              name="capsulas"
+              value="60"
+              class="peer sr-only"
+            />
+            <!--opcion del selector que aparece en navegador-->
+            <span
+              class="px-4 py-1 bg-[#D9D9D9] text-black transition cursor-pointer peer-checked:bg-white peer-checked:border-b-3"
+            >
+              XX cap
+            </span>
+          </label>
+          <label class="relative">
+            <input
+              type="radio"
+              name="capsulas"
+              value="80"
+              class="peer sr-only"
+            />
+            <!--opcion del selector que aparece en navegador-->
+            <span
+              class="px-4 py-1 bg-[#D9D9D9] text-black transition cursor-pointer peer-checked:bg-white peer-checked:border-b-3"
+            >
+              XX cap
+            </span>
+          </label>
+          <label class="relative">
+            <input
+              type="radio"
+              name="capsulas"
+              value="120"
+              class="peer sr-only"
+            />
+            <!--opcion del selector que aparece en navegador-->
+            <span
+              class="px-4 py-1 bg-[#D9D9D9] text-black cursor-pointer peer-checked:bg-white peer-checked:border-b-3"
+            >
+              XXX cap
+            </span>
+          </label>
+        </div>
+        <div class="w-full h-15 mt-5 flex gap-1 | sm:h-11 sm:gap-2">
+          <!--Contador de num de productos-->
+          <div class="w-1/2 border border-[#9E9E9E] border-2 | sm:w-1/5"></div>
+          <!--Add to shopping car btn-->
+          <!--Se desplegará carrito de compras-->
+          <a
+            href="#"
+            class="w-1/2 border bg-black text-white flex items-center justify-center transition hover:bg-[#686868] | sm:w-4/5"
+          >
+            Añadir al carrito</a
+          >
+        </div>
+        <div class="w-full h-15 mt-2 flex | sm:h-11">
+          <!--btn que dirigirá al checkout-->
+          <a
+            href="#"
+            class="w-full bg-[#0D00BD] flex justify-center items-center text-white"
+            >Comprar ahora</a
+          >
+        </div>
+
+        <!--acordion-->
+        <div className="acordion-container ">
+          <div
+            class="accordion-header mt-10 flex items-center justify-between text-[#6D6D6D] cursor-pointer"
+          >
+            <span class="font-semibold text-xl">Detalles</span>
+            <i class="bx bx-chevron-down"></i>
+          </div>
+          <div
+            class="accordion-body border-t-2 border-[#6D6D6D] max-h-0 overflow-hidden transition-all duration-200 ease-out"
+          >
+            <div class="p-2 [&>ul>li]:text-[#6D6D6D]">
+              <!--Detalle de producto > Cada punto se pone dentro del "li"-->
+              <ul>
+                <li>Ejemplo 1</li>
+                <li>Ejemplo 2</li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="accordion-header mt-10 flex items-center justify-between text-[#6D6D6D] cursor-pointer"
+          >
+            <span class="font-semibold text-xl">Envíos</span>
+            <i class="bx bx-chevron-down"></i>
+          </div>
+          <div
+            class="accordion-body max-h-0 overflow-hidden transition-all duration-200 ease-out"
+          >
+            <div class="p-2 [&>ul>li]:text-[#6D6D6D]">
+              <ul></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--product detail end-->
+
+    <!--Reseñas start-->
+    <div class="reseñas-container w-screen px-5 mt-20">
+      <p class="text-md text-[#6D6D6D] text-center">Reseñas</p>
+      <h3 class="text-center text-xl font-semibold">
+        Lo que nuestros usuarios dicen
+      </h3>
+      <!--Reseña container > aqui se despliegan todas las reseñas-->
+      <div class="slider-container mt-10 flex gap-2 lg:px-10">
+        <!--Reseña 1-->
+        <div class="reseña-card border-2 border-[#6D6D6D] w-full">
+          <div class="content p-4 flex flex-col">
+            <!--Nombre cliente-->
+            <h3>Luis venegas</h3>
+            <p class="flex items-center gap-2">
+              <!--Calificacion cliente-->
+              <i class="bx bxs-star"></i>4.5/5.0 Estrellas
+            </p>
+            <!--Reseña cliente-->
+            <p class="p-2">Reseña del cliente</p>
+          </div>
+        </div>
+        <!--Reseña 2-->
+        <div
+          class="reseña-card hidden sm:flex border-2 border-[#6D6D6D] w-full"
+        >
+          <div class="content p-4 flex flex-col">
+            <h3>Luis venegas</h3>
+            <p class="flex items-center gap-2">
+              <i class="bx bxs-star"></i>4.5/5.0 Estrellas
+            </p>
+            <p class="p-2">Reseña del cliente</p>
+          </div>
+        </div>
+        <!--Reseña 3-->
+        <div
+          class="reseña-card hidden xl:flex border-2 border-[#6D6D6D] w-full"
+        >
+          <div class="content p-4 flex flex-col">
+            <h3>Luis venegas</h3>
+            <p class="flex items-center gap-2">
+              <i class="bx bxs-star"></i>4.5/5.0 Estrellas
+            </p>
+            <p class="p-2">Reseña del cliente</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Reseñas end-->
+
+    <!--Prod sugerencias start-->
+    <div class="prod-sugerencias-container w-screen px-5 mt-20">
+      <p class="text-md text-[#6D6D6D] text-center">Productos sugeridos</p>
+      <h3 class="text-center text-xl font-semibold">
+        Te puede interesar
+      </h3>
+      <!--Prod sugerencias container > aqui se despliegan todos los productos-->
+      <div class="prod-suger mt-10 flex flex-col gap-2 items-center justify-center | lg:flex-row lg:gap-5 lg:px-10">
+        <!--Sugerencia 1-->
+        <div class="prod-suger-card w-full | sm:w-100">
+          <div class="content p-4 flex flex-col">
+            <!--Imagen producto-->
+            <div class="border-2 border-[#6D6D6D] rounded-sm">
+              <img src="img/pre-workout.png" alt="">
+            </div>
+            <!--Nombre producto-->
+            <h3>Nombre del producto</h3>
+            <!--Precio producto-->
+            <p class="text-lg font-bold">$XXX.XX</p>
+          </div>
+        </div>
+          <!--Sugerencia 2-->
+          <div class="prod-suger-card w-full | sm:w-100">
+            <div class="content p-4 flex flex-col">
+              <!--Imagen producto-->
+              <div class="border-2 border-[#6D6D6D] rounded-sm">
+                <img src="img/pre-workout.png" alt="">
+              </div>
+              <!--Nombre producto-->
+              <h3>Nombre del producto</h3>
+              <!--Precio producto-->
+              <p class="text-lg font-bold">$XXX.XX</p>
+            </div>
+          </div>
+            <!--Sugerencia 3-->
+            <div class="prod-suger-card w-full | sm:w-100">
+              <div class="content p-4 flex flex-col">
+                <!--Imagen producto-->
+                <div class="border-2 border-[#6D6D6D] rounded-sm">
+                  <img src="img/pre-workout.png" alt="">
+                </div>
+                <!--Nombre producto-->
+                <h3>Nombre del producto</h3>
+                <!--Precio producto-->
+                <p class="text-lg font-bold">$XXX.XX</p>
+              </div>
+            </div>
+      </div>
+    <!--Prod sugerencias end-->
+
+    <!--Contacto start-->
+    <div class="bg-white py-12 px-6 mt-10 sm:py-16 lg:py-20">
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16"
+      >
+        <div class="space-y-4">
+          <h2
+            id="contactanos"
+            class="text-2xl font-bold text-blue-900 tracking-tight sm:text-3xl"
+          >
+            CONTÁCTANOS
+          </h2>
+          <p class="text-base text-gray-700">
+            Expertos en suplementación deportiva. Distribuimos las marcas #1 del
+            mercado para potenciar tu entrenamiento.
+          </p>
+          <div class="mt-2 space-y-2">
+            <p class="text-sm font-semibold text-gray-900">Contáctanos vía:</p>
+            <p class="text-indigo-600 font-medium text-lg">
+              admin.bionutrexmx@gmail.com
+            </p>
+          </div>
+          <div class="mt-4 space-y-2">
+            <p class="text-sm font-semibold text-gray-900">Síguenos</p>
+            <div class="flex flex-col space-y-1">
+              <a
+                href="#"
+                class="flex items-center text-gray-600 hover:text-blue-700"
+              >
+                Facebook
+              </a>
+              <a
+                href="#"
+                class="flex items-center text-gray-600 hover:text-blue-700"
+              >
+                Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+        <form class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
+            <div>
+              <label
+                for="nombre"
+                class="block text-sm font-medium text-gray-700"
+                >Nombre</label
+              >
+              <div class="mt-1 relative rounded-md shadow-sm">
+                <div
+                  class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center"
+                >
+                  <svg
+                    class="h-5 w-5 text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  name="nombre"
+                  id="nombre"
+                  class="focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
+                  placeholder="Ingresa tu nombre..."
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                for="apellido"
+                class="block text-sm font-medium text-gray-700"
+                >Apellido</label
+              >
+              <div class="mt-1 relative rounded-md shadow-sm">
+                <input
+                  type="text"
+                  name="apellido"
+                  id="apellido"
+                  class="focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                  placeholder="Ingresa tu apellido..."
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <label
+              for="correo-electronico"
+              class="block text-sm font-medium text-gray-700"
+              >Correo electrónico</label
+            >
+            <div class="mt-1 relative rounded-md shadow-sm">
+              <div
+                class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center"
+              >
+                <svg
+                  class="h-5 w-5 text-gray-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 4a2 2 0 00-2 2v1.161A7 7 0 019.482 15.6M5 12.04l3.945-2.091A7 7 0 0117 5.96v5a2 2 0 01-2 2H3z"
+                  />
+                </svg>
+              </div>
+              <input
+                type="email"
+                name="correo-electronico"
+                id="correo-electronico"
+                class="focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
+                placeholder="Ingresa tu correo electrónico..."
+              />
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
+            <div>
+              <label
+                for="nombre-compania"
+                class="block text-sm font-medium text-gray-700"
+                >Nombre de la compañía</label
+              >
+              <div class="mt-1 relative rounded-md shadow-sm">
+                <div
+                  class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center"
+                >
+                  <svg
+                    class="h-5 w-5 text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 4a2 2 0 012-2h8a2 2 0 012 2v2h-2V4H6v2H4V4zm10 4a2 2 0 012-2h2v4h-2v-2H10v2h2v-4h-2v2H8v-2H6v4H8v-2h2v2H4v-4h2v2H10v-2h2zM6 9a1 1 0 011-1h2a1 1 0 110 2H7a1 1 0 01-1-1zm4 0a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  name="nombre-compania"
+                  id="nombre-compania"
+                  class="focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
+                  placeholder="Nombre empresarial..."
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                for="intereses"
+                class="block text-sm font-medium text-gray-700"
+                >Intereses</label
+              >
+              <div class="mt-1 relative rounded-md shadow-sm">
+                <div
+                  class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center"
+                >
+                  <svg
+                    class="h-5 w-5 text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  name="intereses"
+                  id="intereses"
+                  class="focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
+                  placeholder="Tus Intereses..."
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <label for="mensaje" class="block text-sm font-medium text-gray-700"
+              >Mensaje</label
+            >
+            <div class="mt-1 relative rounded-md shadow-sm">
+              <div
+                class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center"
+              >
+                <svg
+                  class="h-5 w-5 text-gray-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 011 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <textarea
+                rows="4"
+                name="mensaje"
+                id="mensaje"
+                class="focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
+                placeholder="Tu mensaje..."
+              ></textarea>
+            </div>
+          </div>
+          <div>
+            <button
+              type="submit"
+              class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            >
+              Enviar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Contacto end-->
+    <script>
+      const accordionHeader = document.querySelectorAll(".accordion-header");
+      accordionHeader.forEach((accordionHeader) => {
+        accordionHeader.addEventListener("click", (event) => {
+          accordionHeader.classList.toggle("active");
+          const accordionBody = accordionHeader.nextElementSibling;
+          if (accordionHeader.classList.contains("active")) {
+            accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
+          } else {
+            accordionBody.style.maxHeight = 0;
+          }
+        });
+      });
+    </script>
+
+    <script src="main.js"></script>
+    <!--Pagedone here-->
+  </body>
+</html>
