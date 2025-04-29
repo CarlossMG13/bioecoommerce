@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de usuario</title>
+    <!--Tailwind here-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--icons here-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-[#F2F2F2]">
+    <!--Header start-->
+    <div class="flex items-center justify-center w-screen">
+      <nav
+        class="w-full h-13 relative flex justify-center items-center px-10 | lg:w-[80%] lg:mt-5 lg:rounded-4xl"
+      >
+        <div class="title text-white text-lg relative z-10 flex | lg:flex-grow">
+          <a href="index.html"
+            ><h1>BIO<b>NUTREX</b></h1></a
+          >
+        </div>
+        <div
+          class="menu hidden text-white text-lg relative z-10 flex justify-center items-center | lg:flex"
+        >
+          <ul
+            class="flex [&>li>a]:text-sm [&>li>a]:px-3 [&>li>a]:py-1 [&>li>a]:rounded-2xl [&>li>a]:hover:bg-[#686868] [&>li>a]:transition-all"
+          >
+            <li><a href="index.html#bestseller">Best Sellers</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Suplementos</a></li>
+          </ul>
+        </div>
+        <div
+          class="btns flex gap-2 relative z-10 [&>div>a>img]:w-6 [&>div>a>img]:invert flex flex-grow justify-end | lg:gap-5 lg:[&>div>a>img]:w-8"
+        >
+          <div class="shopping-cart">
+            <a href=""><img src="img/shop-cart.svg" alt="" /></a>
+          </div>
+          <div class="browser">
+            <a href=""><img src="img/browse.svg" alt="" /></a>
+          </div>
+          <div class="user">
+            <a href=""><img src="img/user.svg" alt="" /></a>
+          </div>
+          <div class="">
+            <svg
+              class="h-6 w-5 menu block lg:hidden"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M4 6H20M4 12H20M4 18H20"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="absolute inset-0 bg-[#1E1E1E] opacity-50 rounded-inherit z-0 | lg:rounded-4xl lg"
+        ></div>
+      </nav>
+    </div>
+    <!--Header end-->
+
+    <!--Sign Up start-->
+    <div
+      class="bg-white mt-30 h-screen p-6 sm:p-8 md:p-10 shadow-md rounded-2xl w-full max-w-md lg:max-w-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+    >
+      <h2
+        class="text-center text-2xl font-semibold text-indigo-800 mb-6 sm:mb-8"
+      >
+        Crear Cuenta
+      </h2>
+      <form class="space-y-4 sm:space-y-5">
+        <div class="relative">
+          <i
+            class="fa fa-user absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400"
+          ></i>
+          <input
+            type="text"
+            placeholder="Nombre"
+            required
+            class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          />
+        </div>
+
+        <div class="relative">
+          <i
+            class="fa fa-user absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400"
+          ></i>
+          <input
+            type="text"
+            placeholder="Apellido"
+            required
+            class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          />
+        </div>
+
+        <div class="relative">
+          <i
+            class="fa fa-envelope absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400"
+          ></i>
+          <input
+            type="email"
+            placeholder="Correo electrónico"
+            required
+            class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          />
+        </div>
+
+        <div class="relative">
+          <i
+            class="fa fa-venus-mars absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400"
+          ></i>
+          <select
+            required
+            class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 appearance-none bg-white"
+          >
+            <option value="" disabled selected>Selecciona tu sexo</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="no-especificar">Prefiero no especificar</option>
+          </select>
+        </div>
+
+        <div class="relative">
+          <i
+            class="fa fa-calendar absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400"
+          ></i>
+          <input
+            type="date"
+            required
+            class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          />
+        </div>
+
+        <div class="relative">
+          <i
+            class="fa fa-lock absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400"
+          ></i>
+          <input
+            type="password"
+            placeholder="Contraseña"
+            required
+            class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          />
+        </div>
+
+        <div class="relative">
+          <i
+            class="fa fa-lock absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400"
+          ></i>
+          <input
+            type="password"
+            placeholder="Confirmar contraseña"
+            required
+            class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-indigo-800 text-white p-3 rounded-lg text-lg hover:bg-indigo-600 transition-colors"
+        >
+          Registrarse
+        </button>
+      </form>
+
+      <div class="text-center text-sm mt-5">
+        ¿Ya tienes una cuenta?
+        <a href="login.html" class="text-indigo-800 font-bold hover:underline"
+          >Inicia sesión</a
+        >
+      </div>
+    </div>
+    <!--Sign Up end-->
+  </body>
+</html>
