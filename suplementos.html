@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suplementos</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/css/pagedone.css" rel="stylesheet" />
+    <style>
+        /* Custom styles to manage accordion state */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.25s ease-in-out;
+        }
+
+        .accordion-active .accordion-content {
+            max-height: 500px;
+            /* Adjust as needed */
+        }
+
+        .product-card {
+            @apply h-100 w-full mb-8 bg-white flex flex-col items-center rounded-lg shadow-md overflow-hidden;
+            max-width: min(100%, 350px);
+            /* Added max-width */
+        }
+
+        .product-card img {
+            @apply object-cover h-55 w-30 mx-auto; /* Added mx-auto for horizontal centering */
+            max-height: 200px;
+            /* Added max-height */
+        }
+
+        .product-card .text-container {
+            @apply w-full h-20 text-black pt-2;
+        }
+    </style>
+</head>
+
+<body class="block">
+    <div class="w-full h-150 bg-[url(img/heroimg.jpeg)] bg-no-repeat bg-cover flex flex-col justify-between items-center text-white relative">
+        <div class="w-full h-150 bg-black absolute opacity-50"></div>
+
+        <nav class="w-screen h-13 relative flex items-center px-5 md:px-10 lg:w-[80%] lg:mt-5 lg:rounded-4xl">
+            <div class="title text-white text-lg relative z-10 flex | lg:flex-grow">
+                <h1>BIO<b>NUTREX</b></h1>
+            </div>
+            <div class="menu hidden text-white text-lg relative z-10 flex justify-center items-center | lg:flex">
+                <ul class="flex [&>li>a]:text-sm [&>li>a]:px-3 [&>li>a]:py-1 [&>li>a]:rounded-2xl [&>li>a]:hover:bg-[#686868] [&>li>a]:transition-all">
+                    <li><a href="index.html#bestseller">Best Sellers</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="suplementos.html">Suplementos</a></li>
+                </ul>
+            </div>
+            <div class="btns flex gap-2 relative z-10 [&>div>a>img]:w-6 [&>div>a>img]:invert flex flex-grow justify-end | lg:gap-5 lg:[&>div>a>img]:w-8">
+                <div class="shopping-cart">
+                    <a href=""><img class="invert" src="img/shop-cart.svg" alt="" /></a>
+                </div>
+                <div class="browser">
+                    <a href=""><img src="img/browse.svg" alt="" /></a>
+                </div>
+                <div class="user">
+                    <a href="signup.html"><img src="img/user.svg" alt="" /></a>
+                </div>
+                <div id="menu-mobile" class="">
+                    <a href="#">
+                        <svg class="h-6 w-5 menu block lg:hidden" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M4 6H20M4 12H20M4 18H20" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <div id="ham_menu" class="hidden absolute w-30 top-6 bg-[#1E1E1E] flex flex-col justify-center items-center gap-5 z-20">
+                    <ul>
+                        <li class="hover:bg-[#4E4E4E]"><a href="index.html#bestseller">Best sellers</a></li>
+                        <li class="hover:bg-[#4E4E4E]"><a href="index.html">Home</a></li>
+                        <li class="hover:bg-[#4E4E4E]"><a href="suplementos.html">Suplements</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="absolute inset-0 bg-[#1E1E1E] opacity-50 rounded-inherit z-0 | lg:rounded-4xl"></div>
+        </nav>
+        <div class="z-4 flex flex-col justify-center items-center mb-25">
+            <h1 class="xl:text-7xl lg:text-5xl md:text-4xl text-3xl font-bold mb-5 text-center">DESCUBRE LO MEJOR DE BIONUTREX</h1>
+            <button class="bg-white text-lg text-black w-30 h-10 mb-30 hover:text-white hover:bg-black transition"><a href="#suplementos">Ver mas</a></button>
+        </div>
+    </div>
+    <div class="lg:h-200 h-auto min-h-[410px] w-full bg-linear-to-bl from-[#675CF5] to-[#05004F] flex flex-col items-center text-white py-10">
+        <div>
+            <h1 class="text-white text-4xl md:text-5xl text-center pt-5 md:pt-10 font-bold">NUEVA COLECCIÓN</h1>
+        </div>
+        <div class="flex justify-center w-full items-center">
+        <div class="w-full flex flex-row justify-center items-center gap-5 lg:gap-10 mt-10 md:mt-30 px-5 lg:px-10 max-w-6xl flex-wrap">
+
+            <!-- carta de productos -->
+            <div class="product-card bg-white w-fit flex flex-col justify-center items-center">
+                <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
+                    <!-- categoria -->
+                    <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
+                    <a href="#"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
+                </div>
+                    <!-- imagen del producto -->
+                <img class="product-card img" src="img/citrato.png" alt="">
+                <div class="text-container">
+                    <!-- nombre del producto -->
+                    <h2 class="font-regular text-lg pl-5 pr-5">
+                        Citrato de magnesio
+                    </h2>
+                    <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
+                    <!-- precio -->
+                    <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
+                </div>
+            </div>
+
+            <!-- carta de productos -->
+            <div class="product-card bg-white w-fit flex flex-col justify-center items-center">
+                <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
+                    <!-- categoria -->
+                    <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
+                    <a href="#"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
+                </div>
+                    <!-- imagen del producto -->
+                <img class="product-card img" src="img/citrato.png" alt="">
+                <div class="text-container">
+                    <!-- nombre del producto -->
+                    <h2 class="font-regular text-lg pl-5 pr-5">
+                        Citrato de magnesio
+                    </h2>
+                    <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
+                    <!-- precio -->
+                    <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
+                </div>
+            </div>
+
+
+            <!-- carta de productos -->
+            <div class="product-card bg-white w-fit flex flex-col justify-center items-center">
+                <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
+                    <!-- categoria -->
+                    <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
+                    <a href="#"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
+                </div>
+                    <!-- imagen del producto -->
+                <img class="product-card img" src="img/citrato.png" alt="">
+                <div class="text-container">
+                    <!-- nombre del producto -->
+                    <h2 class="font-regular text-lg pl-5 pr-5">
+                        Citrato de magnesio
+                    </h2>
+                    <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
+                    <!-- precio -->
+                    <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <h1 class="text-center mt-5 text-4xl md:text-5xl" id="suplementos">PRODUCTOS</h1>
+
+    <div class="flex flex-col lg:flex-row w-full px-5 lg:px-10 py-10 lg:py-16 max-w-7xl mx-auto">
+
+        <!-- filtracion de productos -->
+        <div class='accordion-group mt-10 block lg:hidden w-full' data-accordion="default-accordion">
+            <div class='accordion pb-4 border-b border-solid border-gray-200' id='basic-heading-one-default'>
+                <button class='accordion-toggle group accordion-active:text-indigo-600 inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-indigo-600 active:text-indigo-600'
+                    aria-controls='basic-collapse-one-default'>
+                    <h5>TIPO</h5>
+                    <svg class='text-gray-900 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:rotate-180' width='22' height='22' viewBox='0 0 22 22' fill='none'
+                        xmlns='http://www.w3.org/2000/svg'>
+                        <path d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25' stroke='currentColor' stroke-width='1.6' stroke-linecap='round'
+                            stroke-linejoin='round'></path>
+                    </svg>
+                </button>
+                <div id='basic-collapse-one-default' class='accordion-content w-full px-0 overflow-hidden pr-4' aria-labelledby='basic-heading-one-default'>
+                    <ul class='text-base text-gray-600 leading-6'>
+                        <li>
+                            <input type="checkbox" id="proteinaCheck" name="proteinaCheck" value="proteina"> <label for="proteinaCheck">proteina</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="creatinaCheck" name="creatinaCheck" value="Creatina"> <label for="creatinaCheck">Creatina</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="aminoacidoCheck" name="aminoacidoCheck" value="Aminoácido"> <label for="aminoacidoCheck">Aminoácido</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="pre-entrenoCheck" name="pre-entrenoCheck" value="pre-entreno"> <label for="Pre-entrenoCheck">Pre-entreno</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="vitaminaCheck" name="vitaminaCheck" value="Vitamina"> <label for="vitaminaCheck">Vitamina</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="fat-burnerCheck" name="fat-burnerCheck" value="Fat-burner"> <label for="Fat-burnerCheck">Fat-burner</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="colagenoCheck" name="colagenoCheck" value="Colageno"> <label for="ColagenoCheck">Colágeno</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class='accordion pb-4 border-b border-solid border-gray-200' id='basic-heading-one-default'>
+                <button class='accordion-toggle group accordion-active:text-indigo-600 inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-indigo-600 active:text-indigo-600'
+                    aria-controls='basic-collapse-one-default'>
+                    <h5>FUNCIÓN</h5>
+                    <svg class='text-gray-900 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:rotate-180' width='22' height='22' viewBox='0 0 22 22' fill='none'
+                        xmlns='http://www.w3.org/2000/svg'>
+                        <path d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25' stroke='currentColor' stroke-width='1.6' stroke-linecap='round'
+                            stroke-linejoin='round'></path>
+                    </svg>
+                </button>
+                <div id='basic-collapse-one-default' class='accordion-content w-full px-0 overflow-hidden pr-4' aria-labelledby='basic-heading-one-default'>
+                    <ul class='text-base text-gray-600 leading-6'>
+                        <li>
+                            <input type="checkbox" id="constmCheck" name="constmCheck" value="Construcción_muscular"> <label for="constmCheck">Construcción muscular</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="aumeneCheck" name="aumeneCheck" value="Aumento_de_energia"> <label for="aumeneCheck">Aumento de energía</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="recmusCheck" name="recmusCheck" value="recuperacion_muscular"> <label for="recmusCheck">Recuperación muscular</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="QuemagCheck" name="QuemagCheck" value="quema_de_grasa"> <label for="QuemagCheck">Quema de grasa</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="saloyaCheck" name="saloyaCheck" value="salud_osea_y_articular"> <label for="saloyaCheck">Salud ósea y articular</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="apoyoinCheck" name="apoyoinCheck" value="apoyo_inmunologico"> <label for="apoyoinCheck">Apoyo inmunológico</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class='accordion pb-4 border-b border-solid border-gray-200' id='basic-heading-one-default'>
+                <button class='accordion-toggle group accordion-active:text-indigo-600 inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-indigo-600 active:text-indigo-600'
+                    aria-controls='basic-collapse-one-default'>
+                    <h5>OBJETIVO</h5>
+                    <svg class='text-gray-900 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:rotate-180' width='22' height='22' viewBox='0 0 22 22' fill='none'
+                    xmlns='http://www.w3.org/2000/svg'>
+                    <path d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25' stroke='currentColor' stroke-width='1.6' stroke-linecap='round'
+                        stroke-linejoin='round'></path>
+                </svg>
+            </button>
+            <div id='basic-collapse-one-default' class='accordion-content w-full px-0 overflow-hidden pr-4' aria-labelledby='basic-heading-one-default'>
+                <ul class='text-base text-gray-600 leading-6'>
+                    <li>
+                        <input type="checkbox" id="aumefuCheck" name="aumefuCheck" value="Aumento_de_fuerza"> <label for="aumefuCheck">Aumento de fuerza</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="mejoreCheck" name="mejoreCheck" value="Mejorar_la_resistencia"> <label for="mejoreCheck">Mejorar la resistencia</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="perderpCheck" name="perderpCheck" value="Perder_peso"> <label for="perderpCheck">Perder peso</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="ganarmCheck" name="ganarmCheck" value="Ganar_masa_muscular"> <label for="ganarmCheck">Ganar masa muscular</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="mejorsaCheck" name="mejorsaCheck" value="Mejorar_salud_general"> <label for="mejorsaCheck">Mejorar salud general</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="recupopCheck" name="recupopCheck" value="Recuperación_Post-Entreno"> <label for="recupopCheck">Recuperación Post-Entreno</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class='accordion pb-4 border-b border-solid border-gray-200' id='basic-heading-one-default'>
+            <button class='accordion-toggle group accordion-active:text-indigo-600 inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-indigo-600 active:text-indigo-600'
+                aria-controls='basic-collapse-one-default'>
+                <h5>RANGO</h5>
+                <svg class='text-gray-900 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:rotate-180' width='22' height='22' viewBox='0 0 22 22' fill='none'
+                    xmlns='http://www.w3.org/2000/svg'>
+                    <path d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25' stroke='currentColor' stroke-width='1.6' stroke-linecap='round'
+                        stroke-linejoin='round'></path>
+                </svg>
+            </button>
+            <div id='basic-collapse-one-default' class='accordion-content w-full px-0 overflow-hidden pr-4' aria-labelledby='basic-heading-one-default'>
+                <ul class='text-base text-gray-600 leading-6'>
+                    <li>
+                        <label for="priceRange">Precio:</label>
+                        <input type="range" id="priceRange" min="0" max="1000" value="500" oninput="updatePrice(this.value)">
+                        <p>Min: $0 - Max: <span id="minPrice">$500</span></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden lg:flex flex-col w-60">
+        <div class="mb-8">
+            <h3 class="text-lg font-semibold mb-3">TIPO</h3>
+            <ul class="text-base text-gray-600 leading-6">
+                <li>
+                    <input type="checkbox" id="proteinaCheckDesk" name="proteinaCheckDesk" value="proteina">
+                    <label for="proteinaCheckDesk">Proteina</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="creatinaCheckDesk" name="creatinaCheckDesk" value="Creatina">
+                    <label for="creatinaCheckDesk">Creatina</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="aminoacidoCheckDesk" name="aminoacidoCheckDesk" value="Aminoácido">
+                    <label for="aminoacidoCheckDesk">Aminoácido</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="pre-entrenoCheckDesk" name="pre-entrenoCheckDesk" value="pre-entreno">
+                    <label for="Pre-entrenoCheckDesk">Pre-entreno</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="vitaminaCheckDesk" name="vitaminaCheckDesk" value="Vitamina">
+                    <label for="vitaminaCheckDesk">Vitamina</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="fat-burnerCheckDesk" name="fat-burnerCheckDesk" value="Fat-burner">
+                    <label for="Fat-burnerCheckDesk">Fat-burner</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="colagenoCheckDesk" name="colagenoCheckDesk" value="Colageno">
+                    <label for="colagenoCheckDesk">Colágeno</label>
+                </li>
+            </ul>
+        </div>
+        <div class="mb-8">
+            <h3 class="text-lg font-semibold mb-3">FUNCIÓN</h3>
+            <ul class="text-base text-gray-600 leading-6">
+                <li>
+                    <input type="checkbox" id="constmCheckDesk" name="constmCheckDesk" value="Construcción_muscular">
+                    <label for="constmCheckDesk">Construcción muscular</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="aumeneCheckDesk" name="aumeneCheckDesk" value="Aumento_de_energia">
+                    <label for="aumeneCheckDesk">Aumento de energía</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="recmusCheckDesk" name="recmusCheckDesk" value="recuperacion_muscular">
+                    <label for="recmusCheckDesk">Recuperación muscular</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="QuemagCheckDesk" name="QuemagCheckDesk" value="quema_de_grasa">
+                    <label for="QuemagCheckDesk">Quema de grasa</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="saloyaCheckDesk" name="saloyaCheckDesk" value="salud_osea_y_articular">
+                    <label for="saloyaCheckDesk">Salud ósea y articular</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="apoyoinCheckDesk" name="apoyoinCheckDesk" value="apoyo_inmunologico">
+                    <label for="apoyoinCheckDesk">Apoyo inmunológico</label>
+                </li>
+            </ul>
+        </div>
+        <div class="mb-8">
+            <h3 class="text-lg font-semibold mb-3">OBJETIVO</h3>
+            <ul class="text-base text-gray-600 leading-6">
+                <li>
+                    <input type="checkbox" id="aumefuCheckDesk" name="aumefuCheckDesk" value="Aumento_de_fuerza">
+                    <label for="aumefuCheckDesk">Aumento de fuerza</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="mejoreCheckDesk" name="mejoreCheckDesk" value="Mejorar_la_resistencia">
+                    <label for="mejoreCheckDesk">Mejorar la resistencia</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="perderpCheckDesk" name="perderpCheckDesk" value="Perder_peso">
+                    <label for="perderpCheckDesk">Perder peso</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="ganarmCheckDesk" name="ganarmCheckDesk" value="Ganar_masa_muscular">
+                    <label for="ganarmCheckDesk">Ganar masa muscular</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="mejorsaCheckDesk" name="mejorsaCheckDesk" value="Mejorar_salud_general">
+                    <label for="mejorsaCheckDesk">Mejorar salud general</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="recupopCheckDesk" name="recupopCheckDesk" value="Recuperación_Post-Entreno">
+                    <label for="recupopCheckDesk">Recuperación Post-Entreno</label>
+                </li>
+            </ul>
+        </div>
+        <div class="mb-8">
+            <h3 class="text-lg font-semibold mb-3">RANGO</h3>
+            <label for="priceRangeDesk">Precio:</label>
+            <input type="range" id="priceRangeDesk" min="0" max="1000" value="500" oninput="updatePriceDesk(this.value)">
+            <p>Min: $0 - Max: <span id="minPriceDesk">$500</span></p>
+        </div>
+    </div>
+
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:ml-15 ml-0 lg:grid-cols-3 gap-6 md:gap-10 mt-10 md:mt-30 w-full max-w-6xl px-5 ">
+        <!-- carta de producto -->
+        <div class="product-card flex justify-center flex-col items-center">
+            <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
+                <!-- categoria -->
+                <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
+                <a href="#"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
+            </div>
+            <!-- imagen de producto -->
+            <img class="product-card object-contain img" src="img/citrato.png" alt="">
+            <div class="text-container">
+                <!-- nombre de producto -->
+                <h2 class="font-regular text-lg pl-5 pr-5">
+                    Citrato de magnesio
+                </h2>
+                <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
+                <!-- precio -->
+                <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
+            </div>
+        </div>
+
+         <!-- carta de producto -->
+         <div class="product-card flex justify-center flex-col items-center">
+            <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
+                <!-- categoria -->
+                <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
+                <a href="#"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
+            </div>
+            <!-- imagen de producto -->
+            <img class="product-card object-contain img" src="img/citrato.png" alt="">
+            <div class="text-container">
+                <!-- nombre de producto -->
+                <h2 class="font-regular text-lg pl-5 pr-5">
+                    Citrato de magnesio
+                </h2>
+                <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
+                <!-- precio -->
+                <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
+            </div>
+        </div>
+
+
+         <!-- carta de producto -->
+         <div class="product-card flex justify-center flex-col items-center">
+            <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
+                <!-- categoria -->
+                <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
+                <a href="#"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
+            </div>
+            <!-- imagen de producto -->
+            <img class="product-card object-contain img" src="img/citrato.png" alt="">
+            <div class="text-container">
+                <!-- nombre de producto -->
+                <h2 class="font-regular text-lg pl-5 pr-5">
+                    Citrato de magnesio
+                </h2>
+                <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
+                <!-- precio -->
+                <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
+            </div>
+        </div>
+
+         <!-- carta de producto -->
+         <div class="product-card flex justify-center flex-col items-center">
+            <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
+                <!-- categoria -->
+                <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
+                <a href="#"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
+            </div>
+            <!-- imagen de producto -->
+            <img class="product-card object-contain img" src="img/citrato.png" alt="">
+            <div class="text-container">
+                <!-- nombre de producto -->
+                <h2 class="font-regular text-lg pl-5 pr-5">
+                    Citrato de magnesio
+                </h2>
+                <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
+                <!-- precio -->
+                <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
+            </div>
+        </div>
+
+         <!-- carta de producto -->
+         <div class="product-card flex justify-center flex-col items-center">
+            <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
+                <!-- categoria -->
+                <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
+                <a href="#"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
+            </div>
+            <!-- imagen de producto -->
+            <img class="product-card object-contain img" src="img/citrato.png" alt="">
+            <div class="text-container">
+                <!-- nombre de producto -->
+                <h2 class="font-regular text-lg pl-5 pr-5">
+                    Citrato de magnesio
+                </h2>
+                <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
+                <!-- precio -->
+                <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
+            </div>
+        </div>
+
+         <!-- carta de producto -->
+         <div class="product-card flex justify-center flex-col items-center">
+            <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
+                <!-- categoria -->
+                <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
+                <a href="#"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
+            </div>
+            <!-- imagen de producto -->
+            <img class="product-card object-contain img" src="img/citrato.png" alt="">
+            <div class="text-container">
+                <!-- nombre de producto -->
+                <h2 class="font-regular text-lg pl-5 pr-5">
+                    Citrato de magnesio
+                </h2>
+                <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
+                <!-- precio -->
+                <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+<script>
+    function updatePrice(value) {
+        document.getElementById("minPrice").textContent = "$" + value;
+    }
+    function updatePriceDesk(value) {
+        document.getElementById("minPriceDesk").textContent = "$" + value;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const accordions = document.querySelectorAll('.accordion');
+
+        accordions.forEach(accordion => {
+            const toggle = accordion.querySelector('.accordion-toggle');
+            const content = accordion.querySelector('.accordion-content');
+
+            toggle.addEventListener('click', () => {
+                accordion.classList.toggle('accordion-active');
+                if (accordion.classList.contains('accordion-active')) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                } else {
+                    content.style.maxHeight = 0;
+                }
+            });
+        });
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/js/pagedone.min.js"></script>
+</body>
+
+</html>

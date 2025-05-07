@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIONUTREX</title>
+    <!--Tailwind here-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--icons here-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#F2F2F2]">
+    <!--Header start-->
+    <div class="flex items-center justify-center w-screen">
+      <nav
+        class="w-full h-13 relative flex justify-center items-center px-10 | lg:w-[80%] lg:mt-5 lg:rounded-4xl"
+      >
+        <div class="title text-white text-lg relative z-10 flex | lg:flex-grow">
+          <a href="index.html"
+            ><h1>BIO<b>NUTREX</b></h1></a
+          >
+        </div>
+        <div
+          class="menu hidden text-white text-lg relative z-10 flex justify-center items-center | lg:flex"
+        >
+          <ul
+            class="flex [&>li>a]:text-sm [&>li>a]:px-3 [&>li>a]:py-1 [&>li>a]:rounded-2xl [&>li>a]:hover:bg-[#686868] [&>li>a]:transition-all"
+          >
+            <li><a href="index.html#bestseller">Best Sellers</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Suplementos</a></li>
+          </ul>
+        </div>
+        <div
+          class="btns flex gap-2 relative z-10 [&>div>a>img]:w-6 [&>div>a>img]:invert flex flex-grow justify-end | lg:gap-5 lg:[&>div>a>img]:w-8"
+        >
+          <div class="shopping-cart">
+            <a href=""><img src="img/shop-cart.svg" alt="" /></a>
+          </div>
+          <div class="browser">
+            <a href=""><img src="img/browse.svg" alt="" /></a>
+          </div>
+          <div class="user">
+            <a href=""><img src="img/user.svg" alt="" /></a>
+          </div>
+          <div class="">
+            <svg
+              class="h-6 w-5 menu block lg:hidden"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M4 6H20M4 12H20M4 18H20"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="absolute inset-0 bg-[#1E1E1E] opacity-50 rounded-inherit z-0 | lg:rounded-4xl lg"
+        ></div>
+      </nav>
+    </div>
+    <!--Header end-->
+
+    <!--User-->
+
+    <h3 class="mt-10 pl-5 font-semibold">Perfil de usuario</h3>
+    <div class="px-5 mx-5 bg-white mt-5 rounded-lg py-5">
+      <h2>Hola, [username]</h2>
+      <div class="flex gap-3 items-center">
+        <p class="font-semibold">Nombre del usuario</p>
+        <button class="cursor-pointer"><i class="bx bxs-edit"></i></button>
+      </div>
+      <p class="text-gray-800 mt-2">Email</p>
+      <p>ejemplo@gmail.com</p>
+      <p class="text-gray-800 mt-2">Fecha de nac.</p>
+      <p>dd/mm/aaaa</p>
+      <p class="text-gray-800 mt-2">Contraseña</p>
+      <p>**********</p>
+    </div>
+    <!--User end-->
+
+    <!--Address-->
+    <div class="px-5 mx-5 bg-white mt-5 rounded-lg py-5">
+      <div class="flex gap-3 items-center justify-between">
+        <p class="font-semibold">Dirección</p>
+        <button class="cursor-pointer">
+          <i class="bx bx-plus-circle"></i>
+        </button>
+      </div>
+      <div
+        class="flex items-center justify-center gap-2 mt-2 py-3 px-1 bg-[#F5F5F5] rounded-lg | sm:w-60"
+      >
+        <i class="bx bx-info-circle"></i>
+        <p class="text-sm">No hay direcciones registradas</p>
+      </div>
+    </div>
+    <!--Address end-->
+  </body>
+</html>
