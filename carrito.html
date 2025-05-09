@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .cart-visible {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+  <div class="carrito flex flex-col justify-center items-center w-full  bg-[#1E1E1E] text-white fixed top-0 left-0 z-20 transition-transform duration-300 transform -translate-y-full" id="cart-container">
+    <div class="w-full h-20 flex justify-between items-center px-5 bg-[#1E1E1E]">
+      <h2 class="text-lg font-semibold">Carrito de Compras</h2>
+      <button id="close-cart" class="text-white hover:text-gray-400">X</button>
+    </div>
+    <div class="w-full h-auto max-h-[300px] overflow-y-auto p-5">
+  <div class="cart-item flex justify-between items-center mb-4 border-b border-gray-600 pb-2">
+        <span>Producto 1</span>
+        <span>$19.99</span>
+        <div class="quantity-controls flex items-center">
+          <button class="bg-gray-700 text-white px-2 py-1 rounded">-</button>
+          <span class="mx-2">1</span>
+          <button class="bg-gray-700 text-white px-2 py-1 rounded">+</button>
+        </div>
+        <button class="remove-button text-red-500 hover:text-red-700">Eliminar</button>
+      </div>
+          </div>
+
+  </div>
+
+</body>
+</html>

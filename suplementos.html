@@ -39,31 +39,47 @@
     </style>
 </head>
 
-<body class="block">
+<body class="block"><!-- carrito -->
+
+    <div id="carrito" class=" hidden flex flex-col justify-center items-center w-full h-50 bg-[#1E1E1E] text-white fixed top-0 left-0 z-20 transition-transform duration-300 transform" id="cart-container">
+        <div class="w-full h-20 flex justify-between items-start px-5 bg-[#1E1E1E]">
+          <h2 class="text-lg font-semibold">Carrito de Compras</h2>
+          <button id="closeCart" class="text-white hover:text-gray-400">X</button>
+        </div>
+        <div class="carrin w-full h-auto max-h-[300px] overflow-y-auto p-5">
+        </div>
+        <!-- aqui va lo del checkout CARLOS -->
+        <h1 class="" id="defaultmsgc">No has añadido productos aun</h1>
+
+      </div>
+
+    <!-- carrito fin-->
+
     <div class="w-full h-150 bg-[url(img/heroimg.jpeg)] bg-no-repeat bg-cover flex flex-col justify-between items-center text-white relative">
         <div class="w-full h-150 bg-black absolute opacity-50"></div>
-
         <nav class="w-screen h-13 relative flex items-center px-5 md:px-10 lg:w-[80%] lg:mt-5 lg:rounded-4xl">
             <div class="title text-white text-lg relative z-10 flex | lg:flex-grow">
-                <h1>BIO<b>NUTREX</b></h1>
+                <h1><a href="index.html">BIO<b>NUTREX</b></a></h1>
             </div>
             <div class="menu hidden text-white text-lg relative z-10 flex justify-center items-center | lg:flex">
                 <ul class="flex [&>li>a]:text-sm [&>li>a]:px-3 [&>li>a]:py-1 [&>li>a]:rounded-2xl [&>li>a]:hover:bg-[#686868] [&>li>a]:transition-all">
                     <li><a href="index.html#bestseller">Best Sellers</a></li>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="suplementos.html">Suplementos</a></li>
+                    <li><a href="#">Suplementos</a></li>
                 </ul>
             </div>
             <div class="btns flex gap-2 relative z-10 [&>div>a>img]:w-6 [&>div>a>img]:invert flex flex-grow justify-end | lg:gap-5 lg:[&>div>a>img]:w-8">
-                <div class="shopping-cart">
-                    <a href=""><img class="invert" src="img/shop-cart.svg" alt="" /></a>
+                <div id="shopping-cart" class="shopping-cart">
+                    <a id="shopping-cart" href=""><img class="invert" src="img/shop-cart.svg" alt="" /></a>
                 </div>
                 <div class="browser">
                     <a href=""><img src="img/browse.svg" alt="" /></a>
                 </div>
-                <div class="user">
-                    <a href="signup.html"><img src="img/user.svg" alt="" /></a>
-                </div>
+                <a href="profile.html">
+                    <div class="user">
+                        <a href="profile.html"><img src="img/user.svg" alt="" /></a>
+                    </div>
+                </a>
                 <div id="menu-mobile" class="">
                     <a href="#">
                         <svg class="h-6 w-5 menu block lg:hidden" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,9 +93,9 @@
                 </div>
                 <div id="ham_menu" class="hidden absolute w-30 top-6 bg-[#1E1E1E] flex flex-col justify-center items-center gap-5 z-20">
                     <ul>
-                        <li class="hover:bg-[#4E4E4E]"><a href="index.html#bestseller">Best sellers</a></li>
-                        <li class="hover:bg-[#4E4E4E]"><a href="index.html">Home</a></li>
-                        <li class="hover:bg-[#4E4E4E]"><a href="suplementos.html">Suplements</a></li>
+                        <li class="text-white hover:bg-[#4E4E4E]"><a href="index.html #bestseller">Best sellers</a></li>
+                        <li class="text-white hover:bg-[#4E4E4E]"><a href="index.html">Home</a></li>
+                        <li class="text-white hover:bg-[#4E4E4E]"><a href="suplementos.html">Suplements</a></li>
                     </ul>
                 </div>
             </div>
@@ -87,7 +103,7 @@
         </nav>
         <div class="z-4 flex flex-col justify-center items-center mb-25">
             <h1 class="xl:text-7xl lg:text-5xl md:text-4xl text-3xl font-bold mb-5 text-center">DESCUBRE LO MEJOR DE BIONUTREX</h1>
-            <button class="bg-white text-lg text-black w-30 h-10 mb-30 hover:text-white hover:bg-black transition"><a href="#suplementos">Ver mas</a></button>
+            <button class="bg-white text-lg text-black w-30 h-10 mb-30 hover:text-white hover:bg-black transition"><a href="#productos">Ver mas</a></button>
         </div>
     </div>
     <div class="lg:h-200 h-auto min-h-[410px] w-full bg-linear-to-bl from-[#675CF5] to-[#05004F] flex flex-col items-center text-white py-10">
@@ -98,11 +114,57 @@
         <div class="w-full flex flex-row justify-center items-center gap-5 lg:gap-10 mt-10 md:mt-30 px-5 lg:px-10 max-w-6xl flex-wrap">
 
             <!-- carta de productos -->
+             <a href="prod-detalle.html">
+            <div id="productos item-container" class="product-card bg-white w-fit flex flex-col justify-center items-center">
+                <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
+                    <!-- categoria -->
+                    <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
+                    <a class="add-to-cart"><img  class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
+                </div>
+                    <!-- imagen del producto -->
+                <img class="product-card img" src="img/citrato.png" alt="">
+                <div id="text-cont" class="text-container">
+                    <!-- nombre del producto -->
+                    <h2 id="nomProd" class="font-regular text-lg pl-5 pr-5 text-black">
+                        Citrato de magnesio
+                    </h2>
+                    <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
+                    <!-- precio -->
+                    <p id="precProd" class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
+                </div>
+            </div>
+             </a>
+
+                        <!-- carta de productos -->
+             <a href="prod-detalle.html">
+            <div class="product-card bg-white w-fit flex flex-col justify-center items-center">
+                <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
+                    <!-- categoria -->
+                    <h3 id="categoria" class="text-[#070065] text-xl">Nutraceutico</h3>
+                    <a class="add-to-cart"><img  class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
+                </div>
+                    <!-- imagen del producto -->
+                <img class="product-card img" src="img/citrato.png" alt="">
+                <div class="text-container">
+                    <!-- nombre del producto -->
+                    <h2  class="font-regular text-lg pl-5 pr-5">
+                        Citrato de magnesio
+                    </h2>
+                    <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
+                    <!-- precio -->
+                    <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
+                </div>
+            </div>
+             </a>
+
+
+                        <!-- carta de productos -->
+             <a href="prod-detalle.html">
             <div class="product-card bg-white w-fit flex flex-col justify-center items-center">
                 <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
                     <!-- categoria -->
                     <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
-                    <a href="#"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
+                    <img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt="">
                 </div>
                     <!-- imagen del producto -->
                 <img class="product-card img" src="img/citrato.png" alt="">
@@ -116,52 +178,12 @@
                     <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
                 </div>
             </div>
-
-            <!-- carta de productos -->
-            <div class="product-card bg-white w-fit flex flex-col justify-center items-center">
-                <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
-                    <!-- categoria -->
-                    <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
-                    <a href="#"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
-                </div>
-                    <!-- imagen del producto -->
-                <img class="product-card img" src="img/citrato.png" alt="">
-                <div class="text-container">
-                    <!-- nombre del producto -->
-                    <h2 class="font-regular text-lg pl-5 pr-5">
-                        Citrato de magnesio
-                    </h2>
-                    <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
-                    <!-- precio -->
-                    <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
-                </div>
-            </div>
-
-
-            <!-- carta de productos -->
-            <div class="product-card bg-white w-fit flex flex-col justify-center items-center">
-                <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
-                    <!-- categoria -->
-                    <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
-                    <a href="#"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
-                </div>
-                    <!-- imagen del producto -->
-                <img class="product-card img" src="img/citrato.png" alt="">
-                <div class="text-container">
-                    <!-- nombre del producto -->
-                    <h2 class="font-regular text-lg pl-5 pr-5">
-                        Citrato de magnesio
-                    </h2>
-                    <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
-                    <!-- precio -->
-                    <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
-                </div>
-            </div>
+             </a>
         </div>
     </div>
     </div>
 
-    <h1 class="text-center mt-5 text-4xl md:text-5xl" id="suplementos">PRODUCTOS</h1>
+    <h1 class="text-center mt-5 text-4xl md:text-5xl">PRODUCTOS</h1>
 
     <div class="flex flex-col lg:flex-row w-full px-5 lg:px-10 py-10 lg:py-16 max-w-7xl mx-auto">
 
@@ -394,31 +416,12 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:ml-15 ml-0 lg:grid-cols-3 gap-6 md:gap-10 mt-10 md:mt-30 w-full max-w-6xl px-5 ">
         <!-- carta de producto -->
-        <div class="product-card flex justify-center flex-col items-center">
-            <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
-                <!-- categoria -->
-                <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
-                <a href="#"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
-            </div>
-            <!-- imagen de producto -->
-            <img class="product-card object-contain img" src="img/citrato.png" alt="">
-            <div class="text-container">
-                <!-- nombre de producto -->
-                <h2 class="font-regular text-lg pl-5 pr-5">
-                    Citrato de magnesio
-                </h2>
-                <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
-                <!-- precio -->
-                <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
-            </div>
-        </div>
-
-         <!-- carta de producto -->
+ <a href="prod-detalle.html">
          <div class="product-card flex justify-center flex-col items-center">
             <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
                 <!-- categoria -->
                 <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
-                <a href="#"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
+                <img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt="">
             </div>
             <!-- imagen de producto -->
             <img class="product-card object-contain img" src="img/citrato.png" alt="">
@@ -432,14 +435,15 @@
                 <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
             </div>
         </div>
-
+      </a>
 
          <!-- carta de producto -->
+         <a href="prod-detalle.html">
          <div class="product-card flex justify-center flex-col items-center">
             <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
                 <!-- categoria -->
                 <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
-                <a href="#"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
+                <img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt="">
             </div>
             <!-- imagen de producto -->
             <img class="product-card object-contain img" src="img/citrato.png" alt="">
@@ -453,13 +457,16 @@
                 <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
             </div>
         </div>
+      </a>
+
 
          <!-- carta de producto -->
+  <a href="prod-detalle.html">
          <div class="product-card flex justify-center flex-col items-center">
             <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
                 <!-- categoria -->
                 <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
-                <a href="#"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
+                <img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt="">
             </div>
             <!-- imagen de producto -->
             <img class="product-card object-contain img" src="img/citrato.png" alt="">
@@ -473,13 +480,15 @@
                 <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
             </div>
         </div>
+      </a>
 
          <!-- carta de producto -->
+  <a href="prod-detalle.html">
          <div class="product-card flex justify-center flex-col items-center">
             <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
                 <!-- categoria -->
                 <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
-                <a href="#"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
+                <img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt="">
             </div>
             <!-- imagen de producto -->
             <img class="product-card object-contain img" src="img/citrato.png" alt="">
@@ -493,13 +502,15 @@
                 <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
             </div>
         </div>
+      </a>
 
          <!-- carta de producto -->
+  <a href="prod-detalle.html">
          <div class="product-card flex justify-center flex-col items-center">
             <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
                 <!-- categoria -->
                 <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
-                <a href="#"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
+                <img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt="">
             </div>
             <!-- imagen de producto -->
             <img class="product-card object-contain img" src="img/citrato.png" alt="">
@@ -513,11 +524,35 @@
                 <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
             </div>
         </div>
+      </a>
+
+         <!-- carta de producto -->
+  <a href="prod-detalle.html">
+         <div class="product-card flex justify-center flex-col items-center">
+            <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
+                <!-- categoria -->
+                <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
+                <img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt="">
+            </div>
+            <!-- imagen de producto -->
+            <img class="product-card object-contain img" src="img/citrato.png" alt="">
+            <div class="text-container">
+                <!-- nombre de producto -->
+                <h2 class="font-regular text-lg pl-5 pr-5">
+                    Citrato de magnesio
+                </h2>
+                <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
+                <!-- precio -->
+                <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
+            </div>
+        </div>
+      </a>
     </div>
     </div>
 </div>
 
-<script src="main.js"></script>
+<script src="main2.js"></script>
+
 <script>
     function updatePrice(value) {
         document.getElementById("minPrice").textContent = "$" + value;
@@ -543,6 +578,96 @@
             });
         });
     });
+
+    const carrito = document.getElementById('carrito');
+const shoppingCart = document.getElementById('shopping-cart');
+const closeBtn = document.getElementById('closeCart');
+const defaultmsgc = document.getElementById('defaultmsgc');
+const carrin = document.querySelector('.carrin');
+const addItemBtns = document.querySelectorAll('.add-to-cart');
+
+
+shoppingCart.addEventListener('click', (e) => {
+    e.preventDefault();
+    carrito.classList.toggle('hidden');
+});
+
+closeBtn.addEventListener('click', () => {
+    carrito.classList.add('hidden');
+});
+
+addItemBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const productCard = e.target.closest('.product-card');
+        const nomProdElement = productCard?.querySelector('#nomProd');
+        const nomProd = nomProdElement ? nomProdElement.textContent : 'Producto sin nombre';
+        const precProdElement = productCard?.querySelector('#precProd');
+        const precProdValue = precProdElement ? precProdElement.textContent : 'Precio no disponible';
+
+        const itemCart = `
+            <div class="cart-item flex justify-between items-center mb-4 border-b border-gray-600 pb-2">
+                <span>${nomProd}</span>
+                <span>${precProdValue}</span>
+                <div class="quantity-controls flex items-center">
+                    <button class="decrement-btn bg-gray-700 text-white px-2 py-1 rounded">-</button>
+                    <span class="quantity mx-2">1</span>
+                    <button class="increment-btn bg-gray-700 text-white px-2 py-1 rounded">+</button>
+                </div>
+                <button class="remove-button text-red-500 hover:text-red-700">Eliminar</button>
+            </div>`;
+
+
+ carrin.innerHTML += itemCart;
+        carrito.classList.remove('hidden');
+        defaultmsgc.classList.add('hidden');
+
+        // Adjunta los event listeners a los botones de cantidad y eliminar
+        attachQuantityListeners();
+        attachRemoveListeners();
+    });
+});
+
+function attachQuantityListeners() {
+    const cartItems = carrin.querySelectorAll('.cart-item');
+    cartItems.forEach(item => {
+        const incrementBtn = item.querySelector('.increment-btn');
+        const decrementBtn = item.querySelector('.decrement-btn');
+        const quantitySpan = item.querySelector('.quantity');
+
+        incrementBtn.addEventListener('click', () => {
+            let quantity = parseInt(quantitySpan.textContent);
+            quantity++;
+            quantitySpan.textContent = quantity;
+            /* logica para el precio total */
+        });
+
+        decrementBtn.addEventListener('click', () => {
+            let quantity = parseInt(quantitySpan.textContent);
+            if (quantity > 1) {
+                quantity--;
+                quantitySpan.textContent = quantity;
+            /* logica para el precio total  */            }
+        });
+    });
+}
+
+function attachRemoveListeners() {
+    const removeButtons = carrin.querySelectorAll('.remove-button');
+    removeButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.target.closest('.cart-item').remove();
+            if (carrin.children.length === 0) {
+                defaultmsgc.classList.remove('hidden');
+            }
+        });
+    });
+}
+
+// Llama a attachRemoveListeners inicialmente en caso de que haya elementos preexistentes en el carrito (si es aplicable)
+attachRemoveListeners();
+
+
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/js/pagedone.min.js"></script>

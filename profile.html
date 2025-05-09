@@ -15,66 +15,50 @@
   <body class="bg-[#F2F2F2]">
     <!--Header start-->
     <div class="flex items-center justify-center w-screen">
-      <nav
-        class="w-full h-13 relative flex justify-center items-center px-10 | lg:w-[80%] lg:mt-5 lg:rounded-4xl"
-      >
+      <nav class="w-screen h-13 relative flex items-center px-5 md:px-10 lg:w-[80%] lg:mt-5 lg:rounded-4xl">
         <div class="title text-white text-lg relative z-10 flex | lg:flex-grow">
-          <a href="index.html"
-            ><h1>BIO<b>NUTREX</b></h1></a
-          >
+            <h1><a href="index.html">BIO<b>NUTREX</b></a></h1>
         </div>
-        <div
-          class="menu hidden text-white text-lg relative z-10 flex justify-center items-center | lg:flex"
-        >
-          <ul
-            class="flex [&>li>a]:text-sm [&>li>a]:px-3 [&>li>a]:py-1 [&>li>a]:rounded-2xl [&>li>a]:hover:bg-[#686868] [&>li>a]:transition-all"
-          >
-            <li><a href="index.html#bestseller">Best Sellers</a></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Suplementos</a></li>
-          </ul>
+        <div class="menu hidden text-white text-lg relative z-10 flex justify-center items-center | lg:flex">
+            <ul class="flex [&>li>a]:text-sm [&>li>a]:px-3 [&>li>a]:py-1 [&>li>a]:rounded-2xl [&>li>a]:hover:bg-[#686868] [&>li>a]:transition-all">
+                <li><a href="index.html#bestseller">Best Sellers</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Suplementos</a></li>
+            </ul>
         </div>
-        <div
-          class="btns flex gap-2 relative z-10 [&>div>a>img]:w-6 [&>div>a>img]:invert flex flex-grow justify-end | lg:gap-5 lg:[&>div>a>img]:w-8"
-        >
-          <div class="shopping-cart">
-            <a href=""><img src="img/shop-cart.svg" alt="" /></a>
-          </div>
-          <div class="browser">
-            <a href=""><img src="img/browse.svg" alt="" /></a>
-          </div>
-          <div class="user">
-            <a href=""><img src="img/user.svg" alt="" /></a>
-          </div>
-          <div class="">
-            <svg
-              class="h-6 w-5 menu block lg:hidden"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M4 6H20M4 12H20M4 18H20"
-                  stroke="#ffffff"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </g>
-            </svg>
-          </div>
+        <div class="btns flex gap-2 relative z-10 [&>div>a>img]:w-6 [&>div>a>img]:invert flex flex-grow justify-end | lg:gap-5 lg:[&>div>a>img]:w-8">
+            <div id="shopping-cart" class="shopping-cart">
+                <a id="shopping-cart" href=""><img class="invert" src="img/shop-cart.svg" alt="" /></a>
+            </div>
+            <div class="browser">
+                <a href=""><img src="img/browse.svg" alt="" /></a>
+            </div>
+            <a href="profile.html">
+                <div class="user">
+                    <a href="profile.html"><img src="img/user.svg" alt="" /></a>
+                </div>
+            </a>
+            <div id="menu-mobile" class="">
+                <a href="#">
+                    <svg class="h-6 w-5 menu block lg:hidden" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M4 6H20M4 12H20M4 18H20" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <div id="ham_menu" class="hidden absolute w-30 top-6 bg-[#1E1E1E] flex flex-col justify-center items-center gap-5 z-20">
+                <ul>
+                    <li class="text-white hover:bg-[#4E4E4E]"><a href="index.html #bestseller">Best sellers</a></li>
+                    <li class="text-white hover:bg-[#4E4E4E]"><a href="index.html">Home</a></li>
+                    <li class="text-white hover:bg-[#4E4E4E]"><a href="suplementos.html">Suplements</a></li>
+                </ul>
+            </div>
         </div>
-        <div
-          class="absolute inset-0 bg-[#1E1E1E] opacity-50 rounded-inherit z-0 | lg:rounded-4xl lg"
-        ></div>
-      </nav>
+        <div class="absolute inset-0 bg-[#1E1E1E] opacity-50 rounded-inherit z-0 | lg:rounded-4xl"></div>
+    </nav>
     </div>
     <!--Header end-->
 
@@ -112,5 +96,21 @@
       </div>
     </div>
     <!--Address end-->
+
+    <!-- ultimas compras -->
+    <div class="px-5 mx-5 bg-white mt-5 rounded-lg py-5">
+        <div class="flex gap-3 items-center justify-between">
+          <p class="font-semibold">Historial de compras</p>
+          <button class="cursor-pointer">
+          </button>
+        </div>
+        <div
+          class="flex items-center justify-center gap-2 mt-2 py-3 px-1 bg-[#F5F5F5] rounded-lg | sm:w-60"
+        >
+          <i class="bx bx-info-circle"></i>
+          <p class="text-sm">No hay compras registradas</p>
+        </div>
+      </div>
   </body>
+  <script src="main2.js"></script>
 </html>
