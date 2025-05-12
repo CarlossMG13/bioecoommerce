@@ -39,19 +39,26 @@
     </style>
 </head>
 
-<body class="block"><!-- carrito -->
+<body class="block">
+    <!-- carrito -->
 
-    <div id="carrito" class=" hidden flex flex-col justify-center items-center w-full h-50 bg-[#1E1E1E] text-white fixed top-0 left-0 z-20 transition-transform duration-300 transform" id="cart-container">
-        <div class="w-full h-20 flex justify-between items-start px-5 bg-[#1E1E1E]">
-          <h2 class="text-lg font-semibold">Carrito de Compras</h2>
-          <button id="closeCart" class="text-white hover:text-gray-400">X</button>
-        </div>
-        <div class="carrin w-full h-auto max-h-[300px] overflow-y-auto p-5">
-        </div>
-        <!-- aqui va lo del checkout CARLOS -->
-        <h1 class="" id="defaultmsgc">No has añadido productos aun</h1>
-
-      </div>
+    <div id="carrito" class="hidden flex flex-col justify-center items-center w-full h-auto bg-[#1E1E1E] text-white fixed top-0 left-0 z-20 transition-transform duration-300 transform">
+    <div class="w-full h-20 flex justify-between items-start px-5 bg-[#1E1E1E]">
+        <h2 class="text-lg font-semibold">Carrito de Compras</h2>
+        <button id="closeCart" class="text-white hover:text-gray-400">X</button>
+    </div>
+    <div class="carrin w-full h-auto max-h-[300px] overflow-y-auto p-5">
+        <!-- Aquí se agregarán los productos dinámicamente -->
+    </div>
+    <h1 class="hidden" id="defaultmsgc">No has añadido productos aún</h1>
+    <!-- Contenedor para el total -->
+    <div class="w-full px-5 py-3 bg-gray-800 flex justify-between items-center">
+        <span class="text-lg font-semibold">Total:</span>
+        <span id="totalPrice" class="text-lg font-semibold">$0.00</span>
+    </div>
+    <!-- Botón de checkout -->
+    <button id="checkoutBtn" class="bg-green-500 text-white px-5 py-2 mt-3 rounded hover:bg-green-600 mb-5">Checkout</button>
+</div>
 
     <!-- carrito fin-->
 
@@ -122,60 +129,66 @@
                     <a class="add-to-cart"><img  class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
                 </div>
                     <!-- imagen del producto -->
+                     <a href="prod-detalle.html">
                 <img class="product-card img" src="img/citrato.png" alt="">
+                </a>
                 <div id="text-cont" class="text-container">
                     <!-- nombre del producto -->
-                    <h2 id="nomProd" class="font-regular text-lg pl-5 pr-5 text-black">
+                    <h2 class="nomProd font-regular text-lg pl-5 pr-5 text-black">
                         Citrato de magnesio
                     </h2>
                     <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
                     <!-- precio -->
-                    <p id="precProd" class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
+                    <p  class="precProd font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
                 </div>
             </div>
              </a>
 
-                        <!-- carta de productos -->
+           <!-- carta de productos -->
              <a href="prod-detalle.html">
-            <div class="product-card bg-white w-fit flex flex-col justify-center items-center">
-                <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
-                    <!-- categoria -->
-                    <h3 id="categoria" class="text-[#070065] text-xl">Nutraceutico</h3>
-                    <a class="add-to-cart"><img  class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
-                </div>
-                    <!-- imagen del producto -->
-                <img class="product-card img" src="img/citrato.png" alt="">
-                <div class="text-container">
-                    <!-- nombre del producto -->
-                    <h2  class="font-regular text-lg pl-5 pr-5">
-                        Citrato de magnesio
-                    </h2>
-                    <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
-                    <!-- precio -->
-                    <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
-                </div>
-            </div>
-             </a>
-
-
-                        <!-- carta de productos -->
-             <a href="prod-detalle.html">
-            <div class="product-card bg-white w-fit flex flex-col justify-center items-center">
+            <div id="productos item-container" class="product-card bg-white w-fit flex flex-col justify-center items-center">
                 <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
                     <!-- categoria -->
                     <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
-                    <img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt="">
+                    <a class="add-to-cart"><img  class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
                 </div>
                     <!-- imagen del producto -->
+                     <a href="prod-detalle.html">
                 <img class="product-card img" src="img/citrato.png" alt="">
-                <div class="text-container">
+                </a>
+                <div id="text-cont" class="text-container">
                     <!-- nombre del producto -->
-                    <h2 class="font-regular text-lg pl-5 pr-5">
+                    <h2 class="nomProd font-regular text-lg pl-5 pr-5 text-black">
+                        Citrato
+                    </h2>
+                    <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
+                    <!-- precio -->
+                    <p  class="precProd font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
+                </div>
+            </div>
+             </a>
+
+
+         <!-- carta de productos -->
+             <a href="prod-detalle.html">
+            <div id="productos item-container" class="product-card bg-white w-fit flex flex-col justify-center items-center">
+                <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
+                    <!-- categoria -->
+                    <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
+                    <a class="add-to-cart"><img  class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
+                </div>
+                    <!-- imagen del producto -->
+                     <a href="prod-detalle.html">
+                <img class="product-card img" src="img/citrato.png" alt="">
+                </a>
+                <div id="text-cont" class="text-container">
+                    <!-- nombre del producto -->
+                    <h2 class="nomProd font-regular text-lg pl-5 pr-5 text-black">
                         Citrato de magnesio
                     </h2>
                     <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
                     <!-- precio -->
-                    <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
+                    <p  class="precProd font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
                 </div>
             </div>
              </a>
@@ -415,138 +428,129 @@
 
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:ml-15 ml-0 lg:grid-cols-3 gap-6 md:gap-10 mt-10 md:mt-30 w-full max-w-6xl px-5 ">
-        <!-- carta de producto -->
- <a href="prod-detalle.html">
-         <div class="product-card flex justify-center flex-col items-center">
+
+
+
+
+        <div class="product-card flex justify-center flex-col items-center">
             <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
-                <!-- categoria -->
+                <!-- categoría -->
                 <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
-                <img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt="">
+                <a class="add-to-cart"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
             </div>
-            <!-- imagen de producto -->
-            <img class="product-card object-contain img" src="img/citrato.png" alt="">
+            <!-- imagen del producto -->
+            <a href="prod-detalle.html">
+                <img class="product-card object-contain img" src="img/citrato.png" alt="Citrato de magnesio">
+            </a>
             <div class="text-container">
-                <!-- nombre de producto -->
-                <h2 class="font-regular text-lg pl-5 pr-5">
-                    Citrato de magnesio
-                </h2>
+                <!-- nombre del producto -->
+                <h2 class="nomProd font-regular text-lg pl-5 pr-5">Citrato de magnesio</h2>
                 <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
                 <!-- precio -->
-                <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
+                <p class="precProd font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
             </div>
         </div>
-      </a>
 
          <!-- carta de producto -->
-         <a href="prod-detalle.html">
-         <div class="product-card flex justify-center flex-col items-center">
+        <div class="product-card flex justify-center flex-col items-center">
             <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
-                <!-- categoria -->
+                <!-- categoría -->
                 <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
-                <img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt="">
+                <a class="add-to-cart"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
             </div>
-            <!-- imagen de producto -->
-            <img class="product-card object-contain img" src="img/citrato.png" alt="">
+            <!-- imagen del producto -->
+            <a href="prod-detalle.html">
+                <img class="product-card object-contain img" src="img/citrato.png" alt="Citrato de magnesio">
+            </a>
             <div class="text-container">
-                <!-- nombre de producto -->
-                <h2 class="font-regular text-lg pl-5 pr-5">
-                    Citrato de magnesio
-                </h2>
+                <!-- nombre del producto -->
+                <h2 class="nomProd font-regular text-lg pl-5 pr-5">Citrato de magnesio</h2>
                 <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
                 <!-- precio -->
-                <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
+                <p class="precProd font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
             </div>
         </div>
-      </a>
 
 
          <!-- carta de producto -->
-  <a href="prod-detalle.html">
-         <div class="product-card flex justify-center flex-col items-center">
+        <div class="product-card flex justify-center flex-col items-center">
             <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
-                <!-- categoria -->
+                <!-- categoría -->
                 <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
-                <img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt="">
+                <a class="add-to-cart"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
             </div>
-            <!-- imagen de producto -->
-            <img class="product-card object-contain img" src="img/citrato.png" alt="">
+            <!-- imagen del producto -->
+            <a href="prod-detalle.html">
+                <img class="product-card object-contain img" src="img/citrato.png" alt="Citrato de magnesio">
+            </a>
             <div class="text-container">
-                <!-- nombre de producto -->
-                <h2 class="font-regular text-lg pl-5 pr-5">
-                    Citrato de magnesio
-                </h2>
+                <!-- nombre del producto -->
+                <h2 class="nomProd font-regular text-lg pl-5 pr-5">Citrato de magnesio</h2>
                 <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
                 <!-- precio -->
-                <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
+                <p class="precProd font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
             </div>
         </div>
-      </a>
 
          <!-- carta de producto -->
-  <a href="prod-detalle.html">
-         <div class="product-card flex justify-center flex-col items-center">
+        <div class="product-card flex justify-center flex-col items-center">
             <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
-                <!-- categoria -->
+                <!-- categoría -->
                 <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
-                <img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt="">
+                <a class="add-to-cart"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
             </div>
-            <!-- imagen de producto -->
-            <img class="product-card object-contain img" src="img/citrato.png" alt="">
+            <!-- imagen del producto -->
+            <a href="prod-detalle.html">
+                <img class="product-card object-contain img" src="img/citrato.png" alt="Citrato de magnesio">
+            </a>
             <div class="text-container">
-                <!-- nombre de producto -->
-                <h2 class="font-regular text-lg pl-5 pr-5">
-                    Citrato de magnesio
-                </h2>
+                <!-- nombre del producto -->
+                <h2 class="nomProd font-regular text-lg pl-5 pr-5">Citrato de magnesio</h2>
                 <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
                 <!-- precio -->
-                <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
+                <p class="precProd font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
             </div>
         </div>
-      </a>
 
          <!-- carta de producto -->
-  <a href="prod-detalle.html">
-         <div class="product-card flex justify-center flex-col items-center">
+        <div class="product-card flex justify-center flex-col items-center">
             <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
-                <!-- categoria -->
+                <!-- categoría -->
                 <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
-                <img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt="">
+                <a class="add-to-cart"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
             </div>
-            <!-- imagen de producto -->
-            <img class="product-card object-contain img" src="img/citrato.png" alt="">
+            <!-- imagen del producto -->
+            <a href="prod-detalle.html">
+                <img class="product-card object-contain img" src="img/citrato.png" alt="Citrato de magnesio">
+            </a>
             <div class="text-container">
-                <!-- nombre de producto -->
-                <h2 class="font-regular text-lg pl-5 pr-5">
-                    Citrato de magnesio
-                </h2>
+                <!-- nombre del producto -->
+                <h2 class="nomProd font-regular text-lg pl-5 pr-5">Citrato de magnesio</h2>
                 <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
                 <!-- precio -->
-                <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
+                <p class="precProd font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
             </div>
         </div>
-      </a>
 
          <!-- carta de producto -->
-  <a href="prod-detalle.html">
-         <div class="product-card flex justify-center flex-col items-center">
+        <div class="product-card flex justify-center flex-col items-center">
             <div class="w-full h-20 flex flex-row justify-between pl-5 pr-5">
-                <!-- categoria -->
+                <!-- categoría -->
                 <h3 class="text-[#070065] text-xl">Nutraceutico</h3>
-                <img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt="">
+                <a class="add-to-cart"><img class="object-cover h-7 w-7" src="img/shop-cart.svg" alt=""></a>
             </div>
-            <!-- imagen de producto -->
-            <img class="product-card object-contain img" src="img/citrato.png" alt="">
+            <!-- imagen del producto -->
+            <a href="prod-detalle.html">
+                <img class="product-card object-contain img" src="img/citrato.png" alt="Citrato de magnesio">
+            </a>
             <div class="text-container">
-                <!-- nombre de producto -->
-                <h2 class="font-regular text-lg pl-5 pr-5">
-                    Citrato de magnesio
-                </h2>
+                <!-- nombre del producto -->
+                <h2 class="nomProd font-regular text-lg pl-5 pr-5">Citrato de magnesio</h2>
                 <p class="font-regular text-lg pl-5 pr-5 text-sm text-gray-500">precio</p>
                 <!-- precio -->
-                <p class="font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
+                <p class="precProd font-regular text-lg pl-5 pr-5 text-sm text-black">$300.00</p>
             </div>
         </div>
-      </a>
     </div>
     </div>
 </div>
@@ -600,9 +604,9 @@ addItemBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
         const productCard = e.target.closest('.product-card');
-        const nomProdElement = productCard?.querySelector('#nomProd');
+        const nomProdElement = productCard?.querySelector('.nomProd');
         const nomProd = nomProdElement ? nomProdElement.textContent : 'Producto sin nombre';
-        const precProdElement = productCard?.querySelector('#precProd');
+        const precProdElement = productCard?.querySelector('.precProd');
         const precProdValue = precProdElement ? precProdElement.textContent : 'Precio no disponible';
 
         const itemCart = `
@@ -663,6 +667,8 @@ function attachRemoveListeners() {
         });
     });
 }
+
+
 
 // Llama a attachRemoveListeners inicialmente en caso de que haya elementos preexistentes en el carrito (si es aplicable)
 attachRemoveListeners();
